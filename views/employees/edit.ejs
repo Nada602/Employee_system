@@ -2,15 +2,15 @@
 
 <form action="/employees/<%= employee._id %>?_method=PUT" method="POST">
  <div class="mb-3 form-group">
-    <label class="form-label">Name</label>
+    <label class="form-label fw-bold">Name</label>
   <input class="form-control" type="text" name="name" value="<%= employee.name %>" required />
 </div>
 <div class="mb-3">
-  <label class="form-label">Position</label>
+  <label class="form-label fw-bold">Position</label>
   <input class="form-control" type="text" name="position" value="<%= employee.position %>" required />
 </div>
 <div class="mb-3">
-  <label class="form-label">Department</label>
+  <label class="form-label fw-bold">Department</label>
   <input class="form-control" type="text" name="department" value="<%= employee.department %>" required />
 </div>
   <button type="submit">Update</button>
