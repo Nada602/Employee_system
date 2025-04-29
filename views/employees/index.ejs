@@ -1,0 +1,29 @@
+<h2 class="text-center py-3 fw-bolder">All Employees</h2>
+
+<table class="table table-bordered table-striped ">
+  <thead >
+    <tr >
+      <th>Name</th>
+      <th>Position</th>
+      <th>Department</th>
+      <th>Hired</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% employees.forEach(employee => { %>
+      <tr>
+        <td><%= employee.name %></td>
+        <td><%= employee.position %></td>
+        <td><%= employee.department %></td>
+        <td><%= employee.hireDate.toDateString() %></td>
+        <td>
+          <a href="/employees/<%= employee._id %>/edit"><button class="">Edit</button></a>
+          <form action="/employees/<%= employee._id %>?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+          </form>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>

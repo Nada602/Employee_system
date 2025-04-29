@@ -1,0 +1,3 @@
+ORM=> object reletional mapping
+       can use it to link oop with DB AND this uding mongos 
+       which can make structured schema and from this can deal with data
