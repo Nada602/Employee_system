@@ -4,9 +4,9 @@
   <thead >
     <tr >
       <th>Name</th>
-      <th>Position</th>
-      <th>Department</th>
-      <th>Hired</th>
+      <th>salary</th>
+      <th>Address</th>
+      <th>Gender</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -14,9 +14,9 @@
     <% employees.forEach(employee => { %>
       <tr>
         <td><%= employee.name %></td>
-        <td><%= employee.position %></td>
-        <td><%= employee.department %></td>
-        <td><%= employee.hireDate.toDateString() %></td>
+        <td><%= employee.salary %></td>
+        <td><%= employee.address %></td>
+        <td><%= employee.gender %></td>
         <td>
           <a href="/employees/<%= employee._id %>/edit"><button class="">Edit</button></a>
           <form action="/employees/<%= employee._id %>?_method=DELETE" method="POST" style="display:inline;">

@@ -18,9 +18,9 @@ exports.new = (req, res) => {
 
 // Create new employee
 exports.create = async (req, res) => {
-  const { name, position, department } = req.body;
+  const { name, salary, address, gender } = req.body;
   try {
-    await Employee.create({ name, position, department });
+    await Employee.create({ name, salary, address,gender });
     res.redirect("/employees");
   } catch (err) {
     res.status(400).send("Error creating employee");
@@ -39,12 +39,13 @@ exports.edit = async (req, res) => {
 
 // Update employee
 exports.update = async (req, res) => {
-  const { name, position, department } = req.body;
+  const { name, salary, address, gender } = req.body;
   try {
     await Employee.findByIdAndUpdate(req.params.id, {
       name,
-      position,
-      department,
+      salary,
+      address,
+      gender,
     });
     res.redirect("/employees");
   } catch (err) {

@@ -4,19 +4,18 @@ const employeeSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    
   },
-  position: {
+  salary: {
+    type: Number,
+    required: true,
+  },
+  address: {
     type: String,
     required: true,
   },
-  department: {
+  gender: {
     type: String,
     required: true,
-  },
-  hireDate: {
-    type: Date,
-    default: Date.now,
   },
 });
 
