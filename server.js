@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 
 // load env variable
 require('dotenv').config();
-const port= process.env.PORT;
+const port= process.env.PORT || 3000;
 const path=require('path')
 
 const employeeRoutes = require("./routes/web.js");
